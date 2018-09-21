@@ -9,7 +9,7 @@ class App extends Component {
     const num = store.getState()
     return (
       <div className="App">
-        <h1>there are account is { num }</h1>  
+        <h1>there are account is1 { num }</h1>  
         <button onClick={()=>{store.dispatch(ADD())}}>+</button>
         <button onClick={()=>{store.dispatch(MINUS())}}>-</button>
         <button onClick={()=>{store.dispatch(ASYNC())}}>LATER +</button>
