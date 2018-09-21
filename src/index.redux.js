@@ -1,9 +1,19 @@
-export  function reducer( state=0,action){
+const test = {
+  aaa:2,
+  bbb:1
+}
+export  function reducer( state=test,action){
   switch (action.type) {
     case 'ADD':
-      return state + 1
+      return {
+        ...state,
+        aaa: state.aaa +1
+      }
     case 'MINUS':
-      return state - 1
+      return {
+        ...state,
+        aaa: state.aaa -1
+      }
     default:
       return state
   }
