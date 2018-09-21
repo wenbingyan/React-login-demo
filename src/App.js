@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ADD, MINUS,ASYNC  } from './index.redux';
 
+@connect(
+  (state)=>{
+    return {num:state}
+  },
+  {ADD, MINUS,ASYNC}
+)
 class App extends Component {
   render() {
     return (
@@ -14,10 +20,14 @@ class App extends Component {
     );
   }
 }
-const stateToProps = (state)=>{
-  console.log(state)
-  return {num:state}
-}
-const actionToProps = {ADD, MINUS,ASYNC}
-App = connect(stateToProps,actionToProps)(App)
+
 export default App;
+//  1 npm run eject
+//  2 npm install babel-plugin-transform-decorators-legacy --save-dev
+//  3 packages.json 
+// "babel": {
+//   "presets": [
+//     "react-app"
+//   ],
+//   "plugins": ["transform-decorators-legacy"]
+// },
