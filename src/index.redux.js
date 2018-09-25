@@ -2,7 +2,7 @@ const test = {
   aaa:2,
   bbb:1
 }
-export  function reducer( state=test,action){
+export  function counter( state=test,action){
   switch (action.type) {
     case 'ADD':
       return {

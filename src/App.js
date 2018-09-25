@@ -5,7 +5,7 @@ import { ADD, MINUS,ASYNC  } from './index.redux';
 
 @connect(
   (state)=>{
-    return {num:state}
+    return {num:state.counter}
   },
   {ADD, MINUS,ASYNC}
 )
